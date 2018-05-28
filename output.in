@@ -1,0 +1,61 @@
+700 (* Type definition *) 1 1
+412 type 2 1
+101 unaryIntFunction 2 1
+552 : 2 1
+501 ( 2 1
+201 integer 2 1
+552 : 2 1
+101 x 2 1
+502 ) 2 1
+554 -> 2 1
+201 integer 2 1
+700 (* This is a function definition.
+  It uses the above type definition.
+*) 4 1
+413 function 5 1
+101 square 5 1
+552 : 5 1
+101 unaryIntFunction 5 1
+505 { 5 1
+101 square 6 1
+609 := 6 1
+101 x 6 1
+603 * 6 1
+101 x 6 1
+551 ; 6 1
+506 } 7 1
+700 (* This is the main block of the program.
+Execution begins in this block.
+*) 9 1
+505 { 10 1
+503 [ 11 1
+201 integer 11 1
+552 : 11 1
+101 input 11 1
+609 := 11 1
+301 7 11 1
+553 , 11 1
+101 expected 11 1
+609 := 11 1
+301 49 11 1
+553 , 11 1
+101 actual 11 1
+551 ; 11 1
+203 Boolean 11 1
+552 : 11 1
+101 result 11 1
+504 ] 11 1
+101 actual 12 1
+609 := 12 1
+101 square 12 1
+501 ( 12 1
+101 input 12 1
+502 ) 12 1
+551 ; 12 1
+101 result 13 1
+609 := 13 1
+101 expected 13 1
+608 = 13 1
+101 actual 13 1
+551 ; 13 1
+506 } 14 1
