@@ -3,6 +3,7 @@
 #include <stdio.h>
 extern int yylex();
 extern char* yytext;
+extern int yyleng;
 int lineNumber = 1;
 int columnNumber = 1; 
 %}
@@ -69,8 +70,8 @@ int columnNumber = 1;
 "\'"[a-zA-Z]"\'"				return C_CHARACTER;
 "\""[a-zA-Z]*"\""				return C_STRING;
 
-\n			{ lineNumber++; }
-[ \t]*			;
+\n			{ lineNumber++; columnNumber = 1;}
+[ \t]*			{ columnNumber += yyleng; };
 .			printf("Unknown character");
 %%
 
